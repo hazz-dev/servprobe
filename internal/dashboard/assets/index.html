@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svcmon — Service Monitor</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>svcmon</h1>
+    <span id="refresh-info">Loading…</span>
+  </header>
+  <main>
+    <div id="detail-view">
+      <button id="close-detail">Close</button>
+      <h2 id="detail-title"></h2>
+      <div class="detail-info" id="detail-info"></div>
+      <canvas id="chart"></canvas>
+      <table id="detail-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Response</th>
+            <th>Error</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="service-grid">
+      <p class="loading">Loading services…</p>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

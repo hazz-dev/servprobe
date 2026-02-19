@@ -1,0 +1,45 @@
+# svcmon example configuration
+# Copy to config.yml and adjust to your environment.
+
+services:
+  # HTTP health check — GET request, verify status code
+  - name: "api"
+    type: "http"
+    target: "https://api.example.com/health"
+    interval: "30s"           # how often to check (default: 30s)
+    timeout: "5s"             # per-check timeout (default: 5s)
+    expected_status: 200      # expected HTTP status code (default: 200)
+    headers:
+      Authorization: "Bearer your-token-here"
+
+  # TCP connectivity check — dial host:port, measure latency
+  - name: "database"
+    type: "tcp"
+    target: "db.example.com:5432"
+    interval: "15s"
+    timeout: "3s"
+
+  # ICMP ping check — uses system ping binary
+  - name: "gateway"
+    type: "ping"
+    target: "10.0.0.1"
+    interval: "60s"
+    timeout: "5s"
+
+  # Docker container status check — queries Docker Engine API via unix socket
+  - name: "redis"
+    type: "docker"
+    target: "redis"           # container name or ID
+    interval: "30s"
+    timeout: "5s"
+
+alerts:
+  webhook:
+    url: "https://hooks.example.com/alert"   # POST JSON payload here on state change
+    cooldown: "5m"                            # minimum time between alerts for same service
+
+server:
+  address: ":8080"            # listen address for the HTTP API and dashboard
+
+storage:
+  path: "svcmon.db"           # SQLite database file path
