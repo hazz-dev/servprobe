@@ -1,0 +1,16 @@
+services:
+  servprobe:
+    build: .
+    container_name: servprobe
+    restart: unless-stopped
+    ports:
+      - "8893:8893"
+    volumes:
+      - ./config.yml:/etc/servprobe/config.yml:ro
+      - servprobe-data:/data
+    # Required for ping checks
+    cap_add:
+      - NET_RAW
+
+volumes:
+  servprobe-data:

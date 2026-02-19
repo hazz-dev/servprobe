@@ -4,33 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>servprobe — Service Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
-    <h1>servprobe</h1>
+    <div class="header-left">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+        <h1>servprobe</h1>
+      </div>
+      <div class="summary" id="summary">
+        <span class="summary-badge up" id="count-up">0 up</span>
+        <span class="summary-badge down" id="count-down" style="display:none">0 down</span>
+      </div>
+    </div>
     <span id="refresh-info">Loading…</span>
   </header>
-  <main>
-    <div id="detail-view">
-      <button id="close-detail">Close</button>
-      <h2 id="detail-title"></h2>
-      <div class="detail-info" id="detail-info"></div>
-      <canvas id="chart"></canvas>
-      <table id="detail-table">
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Response</th>
-            <th>Error</th>
-            <th>Time</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+
+  <!-- Detail overlay -->
+  <div id="detail-overlay" class="overlay">
+    <div class="detail-panel">
+      <div class="detail-header">
+        <div class="detail-title-row">
+          <div class="detail-status-dot" id="detail-dot"></div>
+          <h2 id="detail-title"></h2>
+          <span class="type-badge" id="detail-type"></span>
+        </div>
+        <button id="close-detail" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="detail-stats" id="detail-info"></div>
+      <div class="chart-container">
+        <h3>Response Time</h3>
+        <canvas id="chart"></canvas>
+      </div>
+      <div class="history-section">
+        <h3>Recent Checks</h3>
+        <table id="detail-table">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Response</th>
+              <th>Error</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
+  </div>
+
+  <main>
     <div id="service-grid">
-      <p class="loading">Loading services…</p>
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading services…</p>
+      </div>
     </div>
   </main>
   <script src="/app.js"></script>

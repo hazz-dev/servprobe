@@ -1,0 +1,14 @@
+servprobe
+*.db
+*.db-wal
+*.db-shm
+.git
+.github
+.claude
+.serena
+.autopilot.conf
+CLAUDE.md
+memory/
+docs/plans/
+config.yml
+temp_*

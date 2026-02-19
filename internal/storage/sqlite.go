@@ -27,12 +27,12 @@ CREATE INDEX IF NOT EXISTS idx_checks_service_checked ON checks(service, checked
 
 // Check is a stored check result.
 type Check struct {
-	ID         int64
-	Service    string
-	Status     string
-	ResponseMs int64
-	Error      string
-	CheckedAt  time.Time
+	ID         int64     `json:"id"`
+	Service    string    `json:"service"`
+	Status     string    `json:"status"`
+	ResponseMs int64     `json:"response_ms"`
+	Error      string    `json:"error"`
+	CheckedAt  time.Time `json:"checked_at"`
 }
 
 // DB wraps a SQLite database.
