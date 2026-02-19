@@ -1,0 +1,6 @@
+bin/
+*.db
+*.sqlite
+dist/
+memory/*.md
+!memory/.gitkeep
