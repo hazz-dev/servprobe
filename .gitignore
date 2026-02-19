@@ -4,3 +4,11 @@ bin/
 dist/
 memory/*.md
 !memory/.gitkeep
+
+# Dev tooling (not distributed)
+.claude/
+.serena/
+.autopilot.conf
+CLAUDE.md
+memory/
+docs/plans/
