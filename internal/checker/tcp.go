@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 type tcpChecker struct {

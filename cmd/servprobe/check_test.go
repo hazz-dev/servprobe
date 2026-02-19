@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 func TestRunChecks_AllUp_OutputFormat(t *testing.T) {

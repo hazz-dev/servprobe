@@ -1,4 +1,4 @@
-module github.com/hazz-dev/svcmon
+module github.com/hazz-dev/servprobe
 
 go 1.25.0
 

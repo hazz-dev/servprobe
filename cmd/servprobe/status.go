@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 type statusStore interface {
@@ -23,7 +23,7 @@ func executeStatus(cmd *cobra.Command, db statusStore) error {
 	}
 
 	if len(checks) == 0 {
-		fmt.Fprintln(out, "No check history. Run 'svcmon serve' or 'svcmon check' first.")
+		fmt.Fprintln(out, "No check history. Run 'servprobe serve' or 'servprobe check' first.")
 		return nil
 	}
 

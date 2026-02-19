@@ -10,8 +10,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 func executeCheck(cmd *cobra.Command, cfg *config.Config) error {

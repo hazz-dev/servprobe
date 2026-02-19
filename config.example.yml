@@ -1,4 +1,4 @@
-# svcmon example configuration
+# servprobe example configuration
 # Copy to config.yml and adjust to your environment.
 
 services:
@@ -42,4 +42,4 @@ server:
   address: ":8080"            # listen address for the HTTP API and dashboard
 
 storage:
-  path: "svcmon.db"           # SQLite database file path
+  path: "servprobe.db"           # SQLite database file path

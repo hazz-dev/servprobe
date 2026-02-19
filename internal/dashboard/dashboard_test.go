@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hazz-dev/svcmon/internal/dashboard"
+	"github.com/hazz-dev/servprobe/internal/dashboard"
 )
 
 func TestHandler_ServesIndexHTML(t *testing.T) {
@@ -22,8 +22,8 @@ func TestHandler_ServesIndexHTML(t *testing.T) {
 	if !strings.Contains(ct, "text/html") {
 		t.Errorf("expected Content-Type text/html, got %q", ct)
 	}
-	if !strings.Contains(w.Body.String(), "svcmon") {
-		t.Error("expected index.html to contain 'svcmon'")
+	if !strings.Contains(w.Body.String(), "servprobe") {
+		t.Error("expected index.html to contain 'servprobe'")
 	}
 }
 

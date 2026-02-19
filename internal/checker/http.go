@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 type httpChecker struct {

@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/config"
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/config"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 // Store defines the storage operations required by the scheduler.

@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 type mockStatusStore struct {

@@ -12,14 +12,14 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hazz-dev/svcmon/internal/alert"
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/config"
-	"github.com/hazz-dev/svcmon/internal/dashboard"
-	"github.com/hazz-dev/svcmon/internal/scheduler"
-	"github.com/hazz-dev/svcmon/internal/server"
-	"github.com/hazz-dev/svcmon/internal/storage"
-	"github.com/hazz-dev/svcmon/internal/version"
+	"github.com/hazz-dev/servprobe/internal/alert"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/config"
+	"github.com/hazz-dev/servprobe/internal/dashboard"
+	"github.com/hazz-dev/servprobe/internal/scheduler"
+	"github.com/hazz-dev/servprobe/internal/server"
+	"github.com/hazz-dev/servprobe/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/version"
 )
 
 var cfgFile string
@@ -32,7 +32,7 @@ func main() {
 
 func rootCmd() *cobra.Command {
 	root := &cobra.Command{
-		Use:          "svcmon",
+		Use:          "servprobe",
 		Short:        "Self-hosted service health monitor",
 		SilenceUsage: true,
 	}
@@ -51,7 +51,7 @@ func versionCmd() *cobra.Command {
 		Use:   "version",
 		Short: "Print version information",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Printf("svcmon %s (commit %s, built %s)\n", version.Version, version.Commit, version.Date)
+			fmt.Printf("servprobe %s (commit %s, built %s)\n", version.Version, version.Commit, version.Date)
 		},
 	}
 }

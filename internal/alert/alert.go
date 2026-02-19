@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/checker"
 )
 
 // Alerter sends webhook notifications on service state changes.
@@ -79,7 +79,7 @@ func (a *Alerter) send(result checker.CheckResult, prevStatus string) {
 		Error:          result.Error,
 		ResponseTimeMs: result.ResponseTime.Milliseconds(),
 		CheckedAt:      result.CheckedAt.UTC().Format(time.RFC3339),
-		Source:         "svcmon",
+		Source:         "servprobe",
 	}
 
 	body, err := json.Marshal(payload)

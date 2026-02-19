@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/alert"
-	"github.com/hazz-dev/svcmon/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/alert"
+	"github.com/hazz-dev/servprobe/internal/checker"
 )
 
 func statusPtr(s checker.Status) *checker.Status {
@@ -173,8 +173,8 @@ func TestAlerter_WebhookPayload(t *testing.T) {
 	if payload["previous_status"] != "up" {
 		t.Errorf("expected previous_status 'up', got %v", payload["previous_status"])
 	}
-	if payload["source"] != "svcmon" {
-		t.Errorf("expected source 'svcmon', got %v", payload["source"])
+	if payload["source"] != "servprobe" {
+		t.Errorf("expected source 'servprobe', got %v", payload["source"])
 	}
 }
 

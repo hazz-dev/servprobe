@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 // mockDockerClient implements checker.DockerClient for testing.

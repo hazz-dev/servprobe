@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 func writeTemp(t *testing.T, content string) string {
@@ -98,8 +98,8 @@ services:
 	if cfg.Server.Address != ":8080" {
 		t.Errorf("expected default address :8080, got %q", cfg.Server.Address)
 	}
-	if cfg.Storage.Path != "svcmon.db" {
-		t.Errorf("expected default storage path svcmon.db, got %q", cfg.Storage.Path)
+	if cfg.Storage.Path != "servprobe.db" {
+		t.Errorf("expected default storage path servprobe.db, got %q", cfg.Storage.Path)
 	}
 }
 

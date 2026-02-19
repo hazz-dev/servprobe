@@ -107,7 +107,7 @@ func Load(path string) (*Config, error) {
 		raw.Server.Address = ":8080"
 	}
 	if raw.Storage.Path == "" {
-		raw.Storage.Path = "svcmon.db"
+		raw.Storage.Path = "servprobe.db"
 	}
 
 	if len(raw.Services) == 0 {

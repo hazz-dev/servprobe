@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hazz-dev/svcmon/internal/config"
+	"github.com/hazz-dev/servprobe/internal/config"
 )
 
 // Checker performs a single health check.

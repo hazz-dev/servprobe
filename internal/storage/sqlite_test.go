@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 func openTestDB(t *testing.T) *storage.DB {

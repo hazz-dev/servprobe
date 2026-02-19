@@ -11,8 +11,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
-	"github.com/hazz-dev/svcmon/internal/config"
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/config"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 // ServerStore defines the storage queries the server needs.

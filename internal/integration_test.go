@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
-	"github.com/hazz-dev/svcmon/internal/config"
-	"github.com/hazz-dev/svcmon/internal/scheduler"
-	"github.com/hazz-dev/svcmon/internal/server"
-	"github.com/hazz-dev/svcmon/internal/storage"
+	"github.com/hazz-dev/servprobe/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/config"
+	"github.com/hazz-dev/servprobe/internal/scheduler"
+	"github.com/hazz-dev/servprobe/internal/server"
+	"github.com/hazz-dev/servprobe/internal/storage"
 )
 
 // TestIntegration_FullFlow verifies the complete pipeline:

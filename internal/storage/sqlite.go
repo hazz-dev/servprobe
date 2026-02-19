@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hazz-dev/svcmon/internal/checker"
+	"github.com/hazz-dev/servprobe/internal/checker"
 	_ "modernc.org/sqlite"
 )
 
